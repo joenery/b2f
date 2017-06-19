@@ -1,9 +1,8 @@
-import pandas
+import pandas as pd
 import os
 
-<<<<<<< HEAD
 def line_with(text, in_file):
-    """ Find first occurrence of a string in the given file
+    """ Get the line number of the given text string in a file
 
     Returns the line number of the string
     """
@@ -11,6 +10,13 @@ def line_with(text, in_file):
         for i, line in enumerate(fh, 1):
             if text in line:
                 return i
-=======
-def 
->>>>>>> c56935aca372a421633b57062e82dd27fc511d89
+
+def read_sample_sheet(header_line, in_file):
+    """ Read a SampleSheet.csv file into a Pandas data frame
+
+    Returns the data frame
+    """
+    return pd.read_csv(in_file, header=header_line)
+    
+
+
